@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Atk4\Login\Form;
 
+use Atk4\Core\TranslatableTrait;
 use Atk4\Data\Model;
 use Atk4\Ui\Form;
 
@@ -12,6 +13,8 @@ use Atk4\Ui\Form;
  */
 class Register extends Form
 {
+    use TranslatableTrait;
+
     /**
      * Which field to look up user by.
      *
@@ -28,7 +31,7 @@ class Register extends Form
 
         $form = $this;
 
-        $form->buttonSave->set('Register');
+        $form->buttonSave->set($this->_('Hello World'));
         $form->buttonSave->addClass('large fluid');
         $form->buttonSave->iconRight = 'right arrow';
     }
